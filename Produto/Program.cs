@@ -6,11 +6,22 @@ namespace Produto
     {
         static void Main(string[] args)
         {
-            Produto p;
-            p = new Produto();
-            p.Nome = "PC";
-            p.Preço = 1400.00;
-            p.Quantidade = 10;
+            
+            string Nome = "PC";
+            double Preço = 1400.00;
+            int Quantidade = 10;
+
+            //Sobrecarga de construtores
+            Produto p = new Produto(Nome, Preço);
+
+            //Sintaxe Alternativa
+            Produto p2 = new Produto();
+
+            //Sintaxe para classe que não possui construtores
+            Produto p3 = new Produto { Nome = "tv" };
+
+
+            
 
             Console.WriteLine("Dados do Produto: " + p);
             Console.WriteLine();

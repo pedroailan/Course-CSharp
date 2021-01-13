@@ -11,6 +11,24 @@ namespace Produto
         public double Preço;
         public int Quantidade;
 
+        public Produto ()
+        {
+            Quantidade = 10;
+        }
+        public Produto(string nome, double preço)
+        {
+            Nome = nome;
+            Preço = preço;
+        }
+
+        //Reaproveitamento de contrutor
+        public Produto(string nome, double preço, int quantidade) : this(nome, preço)
+        {
+            Quantidade = quantidade;
+        }
+
+
+
         public double TotalEmEstoque()
         {
             return Preço * Quantidade;
